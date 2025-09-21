@@ -71,6 +71,7 @@ export default {
         "gradient-secondary": "var(--gradient-secondary)",
         "gradient-success": "var(--gradient-success)",
         "gradient-warning": "var(--gradient-warning)",
+        "gradient-hero": "var(--gradient-hero)",
         "hero-pattern": "url('/src/assets/hero-bg.jpg')",
       },
       boxShadow: {

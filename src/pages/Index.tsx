@@ -27,12 +27,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background bg-hero-pattern bg-cover bg-center bg-no-repeat relative">
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/90 z-0"></div>
-      <div className="relative z-10">
+    <div className="min-h-screen bg-background">
+      <div className="relative">
       {/* Header */}
-      <header className="bg-gradient-primary text-white shadow-large">
+      <header className="bg-gradient-hero text-white shadow-large relative overflow-hidden">
         <div className="container mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -80,7 +78,7 @@ const Index = () => {
           <>
             {/* Features Section */}
             <div className="grid md:grid-cols-3 gap-6 mb-10">
-              <Card className="text-center shadow-soft border-0 bg-gradient-to-br from-card to-accent/10">
+              <Card className="text-center shadow-soft border border-primary/20 bg-gradient-to-br from-card to-primary/5 hover:border-primary/40 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="p-4 bg-gradient-primary rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                     <FileSearch className="h-8 w-8 text-white" />
@@ -92,11 +90,11 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-                 <Card className="text-center shadow-soft border-0 bg-gradient-to-br from-card to-warning/10">
-                 <CardContent className="p-6">
-                   <div className="p-4 bg-gradient-warning rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                     <TrendingUp className="h-8 w-8 text-warning-foreground" />
-                   </div>
+              <Card className="text-center shadow-soft border border-success/20 bg-gradient-to-br from-card to-success/5 hover:border-success/40 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="p-4 bg-gradient-success rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <TrendingUp className="h-8 w-8 text-white" />
+                  </div>
                   <CardTitle className="text-lg mb-2">Relevance Scoring</CardTitle>
                   <CardDescription className="text-sm">
                     Get precise 0-100 scores with detailed gap analysis and improvement suggestions
@@ -104,10 +102,10 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center shadow-soft border-0 bg-gradient-to-br from-card to-secondary/20">
+              <Card className="text-center shadow-soft border border-warning/20 bg-gradient-to-br from-card to-warning/5 hover:border-warning/40 transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="p-4 bg-gradient-secondary rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-8 w-8 text-white" />
+                  <div className="p-4 bg-gradient-warning rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-8 w-8 text-warning-foreground" />
                   </div>
                   <CardTitle className="text-lg mb-2">Bulk Processing</CardTitle>
                   <CardDescription className="text-sm">
@@ -118,7 +116,7 @@ const Index = () => {
             </div>
 
             {/* Upload Section */}
-            <Card className="shadow-large border-0 bg-gradient-to-br from-card via-card to-accent/5">
+            <Card className="shadow-large border border-primary/30 bg-gradient-to-br from-card via-card to-primary/5 backdrop-blur-sm">
               <CardHeader className="text-center pb-6">
                 <CardTitle className="text-2xl font-bold text-card-foreground">
                   Upload & Analyze
