@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { UploadSection } from "@/components/UploadSection";
 import { ResultsDashboard } from "@/components/ResultsDashboard";
 import { Brain, FileSearch, TrendingUp, Users, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 type ViewMode = 'upload' | 'results';
 
@@ -54,18 +55,28 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="hidden md:flex items-center gap-6 text-sm">
-              <div className="text-center">
-                <p className="font-semibold">18-20</p>
-                <p className="text-blue-100">Weekly Jobs</p>
-              </div>
-              <div className="text-center">
-                <p className="font-semibold">4</p>
-                <p className="text-blue-100">Cities</p>
-              </div>
-              <div className="text-center">
-                <p className="font-semibold">1000+</p>
-                <p className="text-blue-100">Applications</p>
+            <div className="hidden md:flex items-center gap-8">
+              <nav className="flex items-center gap-6 text-sm">
+                <Link to="/how-it-works" className="text-blue-100 hover:text-white transition-colors">
+                  How It Works
+                </Link>
+                <Link to="/pricing" className="text-blue-100 hover:text-white transition-colors">
+                  Pricing
+                </Link>
+              </nav>
+              <div className="flex items-center gap-6 text-sm border-l border-white/20 pl-6">
+                <div className="text-center">
+                  <p className="font-semibold">18-20</p>
+                  <p className="text-blue-100">Weekly Jobs</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-semibold">4</p>
+                  <p className="text-blue-100">Cities</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-semibold">1000+</p>
+                  <p className="text-blue-100">Applications</p>
+                </div>
               </div>
             </div>
           </div>
@@ -168,6 +179,8 @@ const Index = () => {
             </div>
             
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
+              <Link to="/how-it-works" className="hover:text-primary transition-colors">How It Works</Link>
+              <Link to="/pricing" className="hover:text-primary transition-colors">Pricing</Link>
               <span>Hyderabad • Bangalore • Pune • Delhi NCR</span>
             </div>
           </div>
