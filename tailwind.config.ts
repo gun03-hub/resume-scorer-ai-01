@@ -70,6 +70,8 @@ export default {
         "gradient-primary": "var(--gradient-primary)",
         "gradient-secondary": "var(--gradient-secondary)",
         "gradient-success": "var(--gradient-success)",
+        "gradient-warning": "var(--gradient-warning)",
+        "hero-pattern": "url('/src/assets/hero-bg.jpg')",
       },
       boxShadow: {
         soft: "var(--shadow-soft)",

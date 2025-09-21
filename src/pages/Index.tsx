@@ -27,7 +27,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-hero-pattern bg-cover bg-center bg-no-repeat relative">
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-background/90 z-0"></div>
+      <div className="relative z-10">
       {/* Header */}
       <header className="bg-gradient-primary text-white shadow-large">
         <div className="container mx-auto px-6 py-8">
@@ -89,11 +92,11 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center shadow-soft border-0 bg-gradient-to-br from-card to-success/10">
-                <CardContent className="p-6">
-                  <div className="p-4 bg-gradient-success rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <TrendingUp className="h-8 w-8 text-white" />
-                  </div>
+                 <Card className="text-center shadow-soft border-0 bg-gradient-to-br from-card to-warning/10">
+                 <CardContent className="p-6">
+                   <div className="p-4 bg-gradient-warning rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                     <TrendingUp className="h-8 w-8 text-warning-foreground" />
+                   </div>
                   <CardTitle className="text-lg mb-2">Relevance Scoring</CardTitle>
                   <CardDescription className="text-sm">
                     Get precise 0-100 scores with detailed gap analysis and improvement suggestions
@@ -172,6 +175,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };
